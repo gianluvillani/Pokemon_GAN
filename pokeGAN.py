@@ -10,6 +10,7 @@ import cv2
 import random
 import scipy.misc
 from utils import *
+from tqdm import tqdm
 
 slim = tf.contrib.slim
 
@@ -212,7 +213,7 @@ def train():
     print('total training sample num:%d' % samples_num)
     print('batch size: %d, batch num per epoch: %d, epoch num: %d' % (batch_size, batch_num, EPOCH))
     print('start training...')
-    for i in range(EPOCH):
+    for i in tqdm(range(EPOCH)):
         print(i)
         for j in range(batch_num):
             print(j)
